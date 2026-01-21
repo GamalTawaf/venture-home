@@ -1,0 +1,40 @@
+# Backend (Python/Django) ignores
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+*.whl
+.mypy_cache/
+.pytest_cache/
+.tox/
+coverage/
+.coverage
+
+# Database
+db.sqlite3
+
+# Environment
+.env
+.env.*
+
+# Django static/build
+staticfiles/
+media/
+
+# Editor/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log

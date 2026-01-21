@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+*.whl
+.mypy_cache/
+.pytest_cache/
+.tox/
+coverage/
+.coverage
+
+# Database
+db.sqlite3
+
+# Node
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-error.log
+.pnp/
+.pnp.js
+.cache/
+dist/
+build/
+public/build/
+.svelte-kit/
+
+# Backend-specific patterns (if you keep backend/ as a separate folder)
+backend/__pycache__/
+backend/*.py[cod]
+backend/venv/
+backend/env/
+backend/.venv/
+backend/.env
+backend/db.sqlite3
+
+# Environment files
+.env
+.env.*
+
+# Editor/IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Keep lockfiles committed for deterministic installs
+# (do not ignore: package-lock.json, yarn.lock, pnpm-lock.yaml)

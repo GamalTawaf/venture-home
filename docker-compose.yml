@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app/
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app/
+      - /app/node_modules
+    ports:
+      - 5173:5173
+    depends_on:
+      - backend
+  db:
+    image: postgres:18
+    volumes:
+      - postgres_data:/var/lib/postgresql/
+    environment:
+      - POSTGRES_USER=venture-user
+      - POSTGRES_PASSWORD=venture-pass
+      - POSTGRES_DB=venture-db
+
+volumes:
+  postgres_data:

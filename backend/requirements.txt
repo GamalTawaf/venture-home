@@ -1,0 +1,8 @@
+Django
+django-environ
+psycopg2
+black
+pylint
+pytest-django
+Faker
+factory-boy
