@@ -36,36 +36,6 @@ class VentureViewSet(viewsets.ModelViewSet):
     ordering_fields = ["name", "pod", "stage", "status", "last_update"]
     ordering = ["-last_update"]
 
-    @action(detail=False, methods=["get"])
-    def metrics(self, request):
-        """Get dashboard metrics"""
-        ventures = self.get_queryset()
-        total_ventures = ventures.count()
-        active_ventures = ventures.filter(status__iexact="active").count()
-
-        total_burn_rate = sum(
-            venture.metrics.get("burn_rate_monthly", 0)
-            for venture in ventures
-            if venture.metrics
-        )
-
-        runways = [
-            venture.metrics.get("runway_months", 0)
-            for venture in ventures
-            if venture.metrics and venture.metrics.get("runway_months", 0) > 0
-        ]
-        avg_runway = round(sum(runways) / len(runways)) if runways else 0
-
-        metrics_data = {
-            "total_ventures": total_ventures,
-            "active_ventures": active_ventures,
-            "total_burn_rate": total_burn_rate,
-            "avg_runway": avg_runway,
-        }
-
-        serializer = VentureMetricsSerializer(metrics_data)
-        return Response(serializer.data)
-
     @action(detail=False, methods=["post"])
     def generate_random(self, request):
         """Generate random ventures for testing"""
