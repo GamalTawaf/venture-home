@@ -1,4 +1,5 @@
 import logging
+import toons
 from django.conf import settings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
