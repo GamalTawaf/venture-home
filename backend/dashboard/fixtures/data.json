@@ -1,0 +1,560 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$g51knOdiP81lchmjxYEVnB$5HUIMfuChuSDG9moZKwRmTFe1t3rY8f2apdZPWvNNbQ=",
+            "last_login": "2026-01-22T01:15:28.453Z",
+            "is_superuser": true,
+            "username": "venture-admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "gamal@isth.best",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2026-01-22T01:10:53.172Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 1,
+        "fields": {
+            "name": "Clay, Charles and Petersen",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Ideation",
+            "founder": "Michael Phillips",
+            "metrics": {
+                "nps_score": 20,
+                "runway_months": 24,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 57421
+            },
+            "status": "off_track",
+            "last_update": "2026-01-03"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 2,
+        "fields": {
+            "name": "Ryan-Mcbride",
+            "pod": "Fintech Innovations",
+            "stage": "Pilot",
+            "founder": "Kelly Velez",
+            "metrics": {
+                "nps_score": 8,
+                "runway_months": 18,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 49822
+            },
+            "status": "on_track",
+            "last_update": "2026-01-07"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 3,
+        "fields": {
+            "name": "Turner-Hall",
+            "pod": "Fintech Innovations",
+            "stage": "Ideation",
+            "founder": "Jason Gordon",
+            "metrics": {
+                "nps_score": 35,
+                "runway_months": 14,
+                "pilot_customers": 9,
+                "burn_rate_monthly": 39712
+            },
+            "status": "off_track",
+            "last_update": "2026-01-15"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 4,
+        "fields": {
+            "name": "Thompson-Baker",
+            "pod": "AI Solutions",
+            "stage": "Scale",
+            "founder": "Tyler Ewing",
+            "metrics": {
+                "nps_score": 52,
+                "runway_months": 9,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 24225
+            },
+            "status": "on_track",
+            "last_update": "2026-01-17"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 5,
+        "fields": {
+            "name": "Mann-Wood",
+            "pod": "Fintech Innovations",
+            "stage": "Pilot",
+            "founder": "Dawn Gutierrez",
+            "metrics": {
+                "nps_score": 43,
+                "runway_months": 7,
+                "pilot_customers": 4,
+                "burn_rate_monthly": 88461
+            },
+            "status": "on_track",
+            "last_update": "2026-01-10"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 6,
+        "fields": {
+            "name": "Nelson LLC",
+            "pod": "Telecommunication",
+            "stage": "Growth",
+            "founder": "Laura Ramos",
+            "metrics": {
+                "nps_score": 47,
+                "runway_months": 2,
+                "pilot_customers": 7,
+                "burn_rate_monthly": 71216
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-01"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 7,
+        "fields": {
+            "name": "Pacheco, Anderson and Webb",
+            "pod": "Fintech Innovations",
+            "stage": "Pilot",
+            "founder": "Christopher Herrera",
+            "metrics": {
+                "nps_score": 21,
+                "runway_months": 9,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 65749
+            },
+            "status": "off_track",
+            "last_update": "2026-01-05"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 8,
+        "fields": {
+            "name": "Murphy LLC",
+            "pod": "Telecommunication",
+            "stage": "Ideation",
+            "founder": "Brian Brown",
+            "metrics": {
+                "nps_score": 56,
+                "runway_months": 20,
+                "pilot_customers": 7,
+                "burn_rate_monthly": 27710
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-17"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 9,
+        "fields": {
+            "name": "Stanley, Scott and Burton",
+            "pod": "Sales",
+            "stage": "Ideation",
+            "founder": "Stacy Lopez",
+            "metrics": {
+                "nps_score": 63,
+                "runway_months": 19,
+                "pilot_customers": 0,
+                "burn_rate_monthly": 73769
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-04"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 10,
+        "fields": {
+            "name": "Smith, Brown and Everett",
+            "pod": "Fintech Innovations",
+            "stage": "Growth",
+            "founder": "Nicholas Snyder",
+            "metrics": {
+                "nps_score": 73,
+                "runway_months": 24,
+                "pilot_customers": 7,
+                "burn_rate_monthly": 15979
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-20"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 11,
+        "fields": {
+            "name": "Meyer Group",
+            "pod": "Sales",
+            "stage": "Ideation",
+            "founder": "Christian Castillo",
+            "metrics": {
+                "nps_score": 97,
+                "runway_months": 11,
+                "pilot_customers": 10,
+                "burn_rate_monthly": 75575
+            },
+            "status": "on_track",
+            "last_update": "2026-01-08"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 12,
+        "fields": {
+            "name": "Mayo PLC",
+            "pod": "Sales",
+            "stage": "Growth",
+            "founder": "Daniel Hughes",
+            "metrics": {
+                "nps_score": 93,
+                "runway_months": 5,
+                "pilot_customers": 5,
+                "burn_rate_monthly": 82851
+            },
+            "status": "off_track",
+            "last_update": "2026-01-12"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 13,
+        "fields": {
+            "name": "Smith-Clark",
+            "pod": "Sales",
+            "stage": "Growth",
+            "founder": "Shawn Edwards",
+            "metrics": {
+                "nps_score": 29,
+                "runway_months": 24,
+                "pilot_customers": 2,
+                "burn_rate_monthly": 23280
+            },
+            "status": "on_track",
+            "last_update": "2026-01-15"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 14,
+        "fields": {
+            "name": "Wood Group",
+            "pod": "Sales",
+            "stage": "Growth",
+            "founder": "Paula Webb",
+            "metrics": {
+                "nps_score": 8,
+                "runway_months": 1,
+                "pilot_customers": 4,
+                "burn_rate_monthly": 34159
+            },
+            "status": "off_track",
+            "last_update": "2026-01-10"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 15,
+        "fields": {
+            "name": "Davis, Shea and Adams",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Ideation",
+            "founder": "Laura Clayton",
+            "metrics": {
+                "nps_score": 91,
+                "runway_months": 13,
+                "pilot_customers": 5,
+                "burn_rate_monthly": 63641
+            },
+            "status": "on_track",
+            "last_update": "2026-01-14"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 16,
+        "fields": {
+            "name": "Lin-Ward",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Ideation",
+            "founder": "David Thomas",
+            "metrics": {
+                "nps_score": 54,
+                "runway_months": 22,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 42190
+            },
+            "status": "off_track",
+            "last_update": "2026-01-19"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 17,
+        "fields": {
+            "name": "Thomas-Gonzales",
+            "pod": "Telecommunication",
+            "stage": "Growth",
+            "founder": "Rebecca Mathews",
+            "metrics": {
+                "nps_score": 95,
+                "runway_months": 3,
+                "pilot_customers": 2,
+                "burn_rate_monthly": 27793
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-06"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 18,
+        "fields": {
+            "name": "Melton, Stevens and Rivera",
+            "pod": "Fintech Innovations",
+            "stage": "Ideation",
+            "founder": "Richard Huber",
+            "metrics": {
+                "nps_score": 49,
+                "runway_months": 8,
+                "pilot_customers": 3,
+                "burn_rate_monthly": 81917
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-14"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 19,
+        "fields": {
+            "name": "Williams, Murphy and Hernandez",
+            "pod": "Sales",
+            "stage": "Pilot",
+            "founder": "Brandon Murphy",
+            "metrics": {
+                "nps_score": 37,
+                "runway_months": 5,
+                "pilot_customers": 0,
+                "burn_rate_monthly": 46847
+            },
+            "status": "off_track",
+            "last_update": "2026-01-11"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 20,
+        "fields": {
+            "name": "Brown, Powell and Galvan",
+            "pod": "Fintech Innovations",
+            "stage": "Ideation",
+            "founder": "John Buckley",
+            "metrics": {
+                "nps_score": 94,
+                "runway_months": 18,
+                "pilot_customers": 5,
+                "burn_rate_monthly": 69456
+            },
+            "status": "off_track",
+            "last_update": "2026-01-02"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 21,
+        "fields": {
+            "name": "Lee PLC",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Scale",
+            "founder": "Mark Norman",
+            "metrics": {
+                "nps_score": 31,
+                "runway_months": 17,
+                "pilot_customers": 9,
+                "burn_rate_monthly": 22632
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-16"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 22,
+        "fields": {
+            "name": "Jones-Ryan",
+            "pod": "Sales",
+            "stage": "Ideation",
+            "founder": "Stephen Burke",
+            "metrics": {
+                "nps_score": 28,
+                "runway_months": 8,
+                "pilot_customers": 1,
+                "burn_rate_monthly": 91651
+            },
+            "status": "on_track",
+            "last_update": "2026-01-19"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 23,
+        "fields": {
+            "name": "Watts-Rose",
+            "pod": "AI Solutions",
+            "stage": "Ideation",
+            "founder": "Christopher Miller",
+            "metrics": {
+                "nps_score": 83,
+                "runway_months": 14,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 62211
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-10"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 24,
+        "fields": {
+            "name": "Murphy Group",
+            "pod": "Telecommunication",
+            "stage": "Scale",
+            "founder": "Stephen Haas",
+            "metrics": {
+                "nps_score": 6,
+                "runway_months": 24,
+                "pilot_customers": 5,
+                "burn_rate_monthly": 12505
+            },
+            "status": "on_track",
+            "last_update": "2026-01-19"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 25,
+        "fields": {
+            "name": "Nelson Ltd",
+            "pod": "Telecommunication",
+            "stage": "Growth",
+            "founder": "Samuel Moreno",
+            "metrics": {
+                "nps_score": 76,
+                "runway_months": 14,
+                "pilot_customers": 10,
+                "burn_rate_monthly": 36341
+            },
+            "status": "on_track",
+            "last_update": "2026-01-12"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 26,
+        "fields": {
+            "name": "Thompson-Ross",
+            "pod": "AI Solutions",
+            "stage": "Ideation",
+            "founder": "Raymond Greer",
+            "metrics": {
+                "nps_score": 70,
+                "runway_months": 11,
+                "pilot_customers": 2,
+                "burn_rate_monthly": 73253
+            },
+            "status": "off_track",
+            "last_update": "2026-01-16"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 27,
+        "fields": {
+            "name": "Sampson, Dyer and Braun",
+            "pod": "Fintech Innovations",
+            "stage": "Scale",
+            "founder": "Sarah Hutchinson",
+            "metrics": {
+                "nps_score": 26,
+                "runway_months": 6,
+                "pilot_customers": 7,
+                "burn_rate_monthly": 69706
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-05"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 28,
+        "fields": {
+            "name": "Lawson, Wagner and Smith",
+            "pod": "Fintech Innovations",
+            "stage": "Pilot",
+            "founder": "Peter Moran",
+            "metrics": {
+                "nps_score": 35,
+                "runway_months": 9,
+                "pilot_customers": 1,
+                "burn_rate_monthly": 69820
+            },
+            "status": "on_track",
+            "last_update": "2026-01-18"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 29,
+        "fields": {
+            "name": "Richardson, King and Gonzalez",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Ideation",
+            "founder": "Dawn Allen",
+            "metrics": {
+                "nps_score": 54,
+                "runway_months": 12,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 83541
+            },
+            "status": "off_track",
+            "last_update": "2026-01-15"
+        }
+    },
+    {
+        "model": "dashboard.venture",
+        "pk": 30,
+        "fields": {
+            "name": "Cox-Franklin",
+            "pod": "Infrastructure Intelligence",
+            "stage": "Growth",
+            "founder": "Sherry Jenkins",
+            "metrics": {
+                "nps_score": 59,
+                "runway_months": 24,
+                "pilot_customers": 8,
+                "burn_rate_monthly": 76219
+            },
+            "status": "at_risk",
+            "last_update": "2026-01-01"
+        }
+    }
+]

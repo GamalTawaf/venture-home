@@ -1,9 +1,17 @@
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from rest_framework_simplejwt.views import TokenRefreshView
+from . import apis, auth_apis
 
-from django.urls import path
-from . import views
+router = DefaultRouter()
+router.register(r"ventures", apis.VentureViewSet)
+
 urlpatterns = [
-    path("dashboard", views.dashboard_view, name="dashboard"),
-    path("ventures", views.venture_list, name="venture_list"),
-    path("add-venture", views.save_venture, name="save_venture"),
-    path("random-ventures", views.generate_random_venture, name="generate_random_venture"),
+    path("", include(router.urls)),
+    path(
+        "auth/login",
+        auth_apis.CustomTokenObtainPairView.as_view(),
+        name="token_obtain_pair",
+    ),
+    path("auth/refresh", TokenRefreshView.as_view(), name="token_refresh"),
 ]

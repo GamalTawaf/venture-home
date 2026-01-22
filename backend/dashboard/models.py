@@ -1,7 +1,8 @@
 from django.db import models
 
+
 # Create your models here.
-#{ example venture object
+# { example venture object
 #   "id": "v-001",
 #   "name": "PortFlow",
 #   "pod": "Infrastructure Intelligence",

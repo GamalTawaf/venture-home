@@ -5,7 +5,7 @@ echo "Starting Django application..."
 # Apply database migrations and start the server
 echo "running migrations..."
 python manage.py migrate
-echo "collecting static files..."
-python manage.py collectstatic --noinput
+echo "loading data..."
+python manage.py loaddata dashboard/fixtures/data.json
 echo "starting server..."
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000

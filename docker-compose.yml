@@ -5,6 +5,8 @@ services:
       - ./backend:/app/
     ports:
       - 8000:8000
+    networks:
+      - local-network
     depends_on:
       - db
   frontend:
@@ -14,6 +16,8 @@ services:
       - /app/node_modules
     ports:
       - 5173:5173
+    networks:
+      - local-network
     depends_on:
       - backend
   db:
@@ -24,6 +28,12 @@ services:
       - POSTGRES_USER=venture-user
       - POSTGRES_PASSWORD=venture-pass
       - POSTGRES_DB=venture-db
+    networks:
+      - local-network
 
 volumes:
   postgres_data:
+
+networks:
+  local-network:
+    driver: bridge
