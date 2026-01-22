@@ -82,6 +82,13 @@ A comprehensive dashboard for managing and visualizing venture data, built with 
 5. **Access the Application**
    - Frontend: http://localhost:5173
 
+6. **Tests**
+   - To run the tests you need. to ssh into the docker image for backend mayebt he name (venture-backend-1) is differnet on your machine so check for the name
+
+   ```
+      docker exec -it venture-backend-1 bash
+      pytest
+   ```
 ## API Endpoints
 
 ### Authentication
