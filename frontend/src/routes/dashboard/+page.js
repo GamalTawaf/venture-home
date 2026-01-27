@@ -13,7 +13,7 @@ export const csr = true;
 // it so that it gets served as a static asset in production
 export const prerender = false;
 
-/** @type {import('./$types').PageLoad} */
+/** @type {import('../$types').PageLoad} */
 export async function load({ fetch }) {
   // Check auth on client
   if (browser) {
@@ -26,7 +26,7 @@ export async function load({ fetch }) {
     if (!isAuthenticated) {
       const token = localStorage.getItem('authToken');
       if (!token) {
-        throw goto('/login');
+        throw goto('/');
       }
     }
   }
@@ -46,7 +46,7 @@ export async function load({ fetch }) {
         active_ventures: 0,
         total_burn_rate: 0,
         avg_runway: 0
-      },
+      }
     };
   } catch (error) {
     console.error('Error loading dashboard data:', error);

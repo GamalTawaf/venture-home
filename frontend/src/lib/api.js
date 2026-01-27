@@ -10,7 +10,7 @@ function handle401(response) {
   if (response.status === 401) {
     logout();
     if (browser) {
-      goto('/login');
+      goto('/');
     }
   }
 }

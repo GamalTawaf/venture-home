@@ -23,7 +23,7 @@ export async function load({ fetch, url }) {
     })();
 
     if (!isAuthenticated) {
-      throw goto('/login');
+      throw goto('/');
     }
   }
 

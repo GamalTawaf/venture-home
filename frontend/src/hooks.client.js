@@ -13,12 +13,12 @@ export async function handle({ event, resolve }) {
     authState = state;
   })();
 
-  const isLoginPage = event.url.pathname === '/login';
+  const isLoginPage = event.url.pathname === '/';
   const isPublicPage = false; // Add more public pages if needed
 
   if (!authState.isAuthenticated && !isLoginPage && !isPublicPage) {
     // Redirect to login if not authenticated and not on login page
-    throw goto('/login');
+    throw goto('/');
   }
 
   // Add auth header to fetch if authenticated

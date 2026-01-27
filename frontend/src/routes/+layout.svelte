@@ -1,4 +1,3 @@
-
 <script>
   import Header from './Header.svelte';
   import ChatWidget from '$lib/components/ChatWidget.svelte';
