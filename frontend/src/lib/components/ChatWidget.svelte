@@ -21,15 +21,6 @@
   /** @type {HTMLElement | null} */
   let chatHistoryContainer = null;
 
-  // Auto-scroll to bottom when chat history changes
-  $: if (chatHistory.length > 0 && chatHistoryContainer) {
-    setTimeout(() => {
-      if (chatHistoryContainer) {
-        chatHistoryContainer.scrollTop = chatHistoryContainer.scrollHeight;
-      }
-    }, 100);
-  }
-
   // Load chat history from sessionStorage on mount
   onMount(() => {
     if (browser) {
@@ -79,19 +70,33 @@
     isLoading = true;
     error = '';
 
+    // Add the question immediately with empty answer
+    const timestamp = new Date();
+    chatHistory = [
+      ...chatHistory,
+      {
+        question: currentQuestion,
+        answer: '...',
+        timestamp
+      }
+    ];
+
+    // Store the index of the new message
+    const messageIndex = chatHistory.length - 1;
+
     try {
       const response = await api.chat(currentQuestion);
 
-      chatHistory = [
-        ...chatHistory,
-        {
-          question: currentQuestion,
-          answer: response.answer,
-          timestamp: new Date()
-        }
-      ];
+      // Update the answer for the last message
+      chatHistory = chatHistory.map((msg, idx) =>
+        idx === messageIndex ? { ...msg, answer: response.answer } : msg
+      );
     } catch (err) {
       error = err instanceof Error ? err.message : 'Failed to get response from AI assistant';
+      // Optionally, update the last message with an error answer
+      chatHistory = chatHistory.map((msg, idx) =>
+        idx === messageIndex ? { ...msg, answer: error } : msg
+      );
       console.error('Chat error:', err);
     } finally {
       isLoading = false;

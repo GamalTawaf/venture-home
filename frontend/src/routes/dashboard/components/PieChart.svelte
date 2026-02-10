@@ -11,9 +11,9 @@
   /** @type {string} */
   export let dataKey = 'stage';
   /** @type {number} */
-  export let width = 600;
+  export let width = 0;
   /** @type {number} */
-  export let height = 400;
+  export let height = 0;
 
   /** @type {HTMLElement | undefined} */
   let container;
@@ -46,7 +46,7 @@
     );
     const dataArray = Array.from(counts, ([key, value]) => ({ key, value }));
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    const color = d3.scaleOrdinal(d3.schemeObservable10);
 
     const svg = d3
       .select(container)

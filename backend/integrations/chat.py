@@ -1,12 +1,16 @@
 import logging
+import time
 import toons
 from django.conf import settings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.caches import InMemoryCache
+from langchain_core.globals import set_llm_cache
 
 GOOGLE_API_KEY = settings.GOOGLE_API_KEY
 logger = logging.getLogger(__name__)
-
+# helps cache LLM responses in memory to speed up repeated questions
+set_llm_cache(InMemoryCache())  # Use in-memory cache for LLM responses
 
 def ask_venture_question(question, ventures):
     """
@@ -53,9 +57,13 @@ def ask_venture_question(question, ventures):
     chain = prompt | llm
 
     try:
+        start_time = time.time()
         result = chain.invoke(
             {"ventures_context": ventures_context, "question": question}
         )
+        end_time = time.time()
+        elapsed = end_time - start_time
+        logger.warning(f"ask_venture_question query took {elapsed:.3f} seconds.")
 
         # Extract content from LangChain AIMessage
         if hasattr(result, "content"):

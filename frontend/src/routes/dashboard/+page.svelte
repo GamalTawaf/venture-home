@@ -290,51 +290,46 @@
         </div>
       </div>
 
-      <!-- Charts Section -->
-      <div class="mb-8 grid grid-cols-1 gap-8">
-        <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 class="mb-4 text-lg font-semibold text-gray-900">Stage Distribution</h3>
-          <Chart
-            data={filteredVentures}
-            chartType="bar"
-            dataKey="stage"
-            width={500}
-            height={300}
-            on:filter={handleChartFilter}
-          />
+      <!-- Responsive Charts Section: Single Column, Mobile Friendly -->
+      <div class="mb-8 grid grid-cols-1 gap-6">
+        <div class="rounded-lg border border-gray-200 bg-white p-2 sm:p-6 shadow-sm flex flex-col min-h-[250px] max-h-[80vh] h-auto overflow-x-auto">
+          <h3 class="mb-4 text-base sm:text-lg font-semibold text-gray-900">Stage Distribution</h3>
+          <div class="flex-1 w-full h-full min-h-[180px]">
+            <Chart
+              data={filteredVentures}
+              chartType="bar"
+              dataKey="stage"
+              on:filter={handleChartFilter}
+            />
+          </div>
         </div>
-      </div>
-      <div class="mb-8 grid grid-cols-1 gap-8">
-        <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 class="mb-4 text-lg font-semibold text-gray-900">Status Overview</h3>
-          <Chart
-            data={filteredVentures}
-            chartType="pie"
-            dataKey="status"
-            width={500}
-            height={300}
-            on:filter={handleChartFilter}
-          />
+        <div class="rounded-lg border border-gray-200 bg-white p-2 sm:p-6 shadow-sm flex flex-col min-h-[250px] md:min-h-[350px] lg:min-h-[450px] min-w-[300px] md:min-w-[400px] lg:min-w-[500px] max-h-[80vh] h-auto overflow-x-auto">
+          <h3 class="mb-4 text-base sm:text-lg font-semibold text-gray-900">Status Overview</h3>
+          <div class="flex-1 w-full h-full min-h-[180px] md:min-h-[250px] lg:min-h-[350px] min-w-[200px] md:min-w-[300px] lg:min-w-[400px]">
+            <Chart
+              data={filteredVentures}
+              chartType="pie"
+              dataKey="status"
+              on:filter={handleChartFilter}
+            />
+          </div>
         </div>
-      </div>
-      <!-- Additional Charts Row -->
-      <div class="mb-8 grid grid-cols-1 gap-8">
-        <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 class="mb-4 text-lg font-semibold text-gray-900">Pod Distribution</h3>
-          <Chart
-            data={filteredVentures}
-            chartType="bar"
-            dataKey="pod"
-            width={500}
-            height={300}
-            on:filter={handleChartFilter}
-          />
+        <div class="rounded-lg border border-gray-200 bg-white p-2 sm:p-6 shadow-sm flex flex-col min-h-[250px] max-h-[80vh] h-auto overflow-x-auto">
+          <h3 class="mb-4 text-base sm:text-lg font-semibold text-gray-900">Pod Distribution</h3>
+          <div class="flex-1 w-full h-full min-h-[180px]">
+            <Chart
+              data={filteredVentures}
+              chartType="bar"
+              dataKey="pod"
+              on:filter={handleChartFilter}
+            />
+          </div>
         </div>
-      </div>
-      <div class="mb-8 grid grid-cols-1 gap-8">
-        <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 class="mb-4 text-lg font-semibold text-gray-900">Burn Rate vs Runway</h3>
-          <Chart data={filteredVentures} chartType="scatter" width={500} height={300} />
+        <div class="rounded-lg border border-gray-200 bg-white p-2 sm:p-6 shadow-sm flex flex-col min-h-[250px] max-h-[80vh] h-auto overflow-x-auto">
+          <h3 class="mb-4 text-base sm:text-lg font-semibold text-gray-900">Burn Rate vs Runway</h3>
+          <div class="flex-1 w-full h-full min-h-[180px]">
+            <Chart data={filteredVentures} chartType="scatter" />
+          </div>
         </div>
       </div>
     {/if}

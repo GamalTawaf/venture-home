@@ -9,9 +9,9 @@
   /** @type {any[]} */
   export let data = [];
   /** @type {number} */
-  export let width = 600;
+  export let width = 0;
   /** @type {number} */
-  export let height = 400;
+  export let height = 0;
 
   /** @type {HTMLElement | undefined} */
   let container;
